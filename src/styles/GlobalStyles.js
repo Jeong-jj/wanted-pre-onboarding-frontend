@@ -11,12 +11,20 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  #root {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
   #root > .container {
-    height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 85%;
+    max-height: 1000px;
+    width: 90%;
+    max-width: 1100px;
 
     background-color: #fff;
+    border: 2px solid #878787;
+    border-radius: 15px;
   }
 `;
 
