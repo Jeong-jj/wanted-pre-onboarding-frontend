@@ -7,11 +7,6 @@ export const PageContainer = styled.div`
   align-items: center;
 
   height: 100%;
-
-  p {
-    margin-top: 15px;
-    font-size: 13px;
-  }
 `;
 
 export const PageTitle = styled.h1`
@@ -19,4 +14,12 @@ export const PageTitle = styled.h1`
 
   font-size: 22px;
   font-weight: bold;
+`;
+
+export const LinkWrap = styled.div`
+  margin-top: 15px;
+  font-size: 13px;
+  a {
+    text-decoration: underline;
+  }
 `;

@@ -37,5 +37,6 @@ const InputBox = styled.input`
 
 const ErrorText = styled.p`
   padding: 6px 0 0 5px;
-  color: red;
+  font-size: 13px;
+  color: #006eff;
 `;

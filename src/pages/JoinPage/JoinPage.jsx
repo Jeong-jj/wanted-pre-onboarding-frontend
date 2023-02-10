@@ -9,9 +9,12 @@ export const JoinPage = () => {
     <S.PageContainer>
       <S.PageTitle>😌가입정보를 입력해주세요.</S.PageTitle>
       <JoinForm />
-      <p>
+      <S.LinkWrap>
         이미 회원이신가요? <Link to={"/signin"}>로그인</Link>
-      </p>
+      </S.LinkWrap>
+      <S.HomeLink>
+        <Link to={"/"}>🏠 홈으로 가기</Link>
+      </S.HomeLink>
     </S.PageContainer>
   );
 };

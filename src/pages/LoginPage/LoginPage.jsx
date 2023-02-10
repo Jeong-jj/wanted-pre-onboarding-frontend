@@ -9,9 +9,12 @@ export const LoginPage = () => {
     <S.PageContainer>
       <S.PageTitle>로그인 정보를 입력해주세요!🙇‍♀️</S.PageTitle>
       <LoginForm />
-      <p>
+      <S.LinkWrap>
         아직 회원이 아니신가요? <Link to={"/signup"}>회원가입</Link>
-      </p>
+      </S.LinkWrap>
+      <S.LinkWrap>
+        <Link to={"/"}>홈으로 가기</Link>
+      </S.LinkWrap>
     </S.PageContainer>
   );
 };
