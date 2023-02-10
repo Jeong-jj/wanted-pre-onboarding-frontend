@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { useForm } from "../../hooks/useForm";
-import { Input } from "../Input/Input";
+import { Input } from "../common/Input/Input";
 import { validate } from "../../utils/validate";
 
 import * as S from "./styles";
