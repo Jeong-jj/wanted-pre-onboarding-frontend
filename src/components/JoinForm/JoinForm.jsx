@@ -1,38 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import { Input } from "../Input/Input";
+import { validate } from "../../utils/validate";
 import * as S from "./styles";
 
 export const JoinForm = () => {
   const { values, handleChange } = useForm(initailValues);
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const errors = validate(values);
 
   useEffect(() => {
-    if (values.email && values.password) {
+    if (!errors.email && !errors.password) {
       setIsChecked(true);
     } else {
       setIsChecked(false);
     }
-  }, [values, setIsChecked]);
+  }, [errors, setIsChecked]);
 
   return (
     <S.FormWrap>
       <Input
+        data-testid="email-input"
         name="email"
-        type="email"
         placeholder="todo@email.com"
         value={values}
         onChange={handleChange}
+        errors={errors}
       />
       <Input
+        data-testid="password-input"
         name="password"
         type="password"
         placeholder="비밀번호는 8자 이상 입력해주세요."
         value={values}
         onChange={handleChange}
+        errors={errors}
       />
 
       <S.SubmitButton
+        data-testid="signup-button"
         type="submit"
         disabled={!isChecked}
         className={`${isChecked ? "" : "disable"}`}
