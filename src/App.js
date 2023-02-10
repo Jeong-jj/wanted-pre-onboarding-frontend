@@ -1,4 +1,5 @@
 import { JoinPage } from "./pages/JoinPage/JoinPage";
+import { LoginPage } from "./pages/LoginPage/LoginPage";
 import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
     <>
       <GlobalStyles />
       <div className="container">
-        <JoinPage />
+        {/* <JoinPage /> */}
+        <LoginPage />
       </div>
     </>
   );

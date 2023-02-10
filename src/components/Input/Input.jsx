@@ -1,7 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Input = ({ type, name, value, onChange, placeholder, errors }) => {
+export const Input = ({
+  join,
+  type,
+  name,
+  value,
+  onChange,
+  placeholder,
+  errors,
+}) => {
   return (
     <InputWrap>
       <InputBox
@@ -11,7 +19,7 @@ export const Input = ({ type, name, value, onChange, placeholder, errors }) => {
         onChange={onChange}
         placeholder={placeholder}
       />
-      {errors[name] && <ErrorText>{errors[name]}</ErrorText>}
+      {join && errors[name] && <ErrorText>{errors[name]}</ErrorText>}
     </InputWrap>
   );
 };
