@@ -10,8 +10,10 @@ export const PageContainer = styled.div`
 `;
 
 export const PageTitle = styled.h1`
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
-  font-size: 22px;
+  font-size: 35px;
   font-weight: bold;
 `;
+
+export const IconWrap = styled.div``;
