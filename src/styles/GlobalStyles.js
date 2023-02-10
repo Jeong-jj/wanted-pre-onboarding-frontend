@@ -4,6 +4,19 @@ import reset from "styled-reset";
 const GlobalStyles = createGlobalStyle`
   /* basic global setting */
   ${reset}
+  a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+  }
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+  }
 
   /* project global setting */
   html, body, #root {

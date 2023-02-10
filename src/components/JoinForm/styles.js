@@ -7,9 +7,8 @@ export const FormWrap = styled.form`
 
 export const SubmitButton = styled.button`
   padding: 7px 5px;
-  margin-top: 40px;
+  margin-top: 22px;
 
-  border: none;
   border-radius: 6px;
 
   color: #fff;

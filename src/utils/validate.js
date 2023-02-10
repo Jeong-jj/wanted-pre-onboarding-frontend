@@ -8,7 +8,7 @@ export const validate = (values) => {
   if (!values.email) {
     errors.email = "이메일을 입력해주세요.";
   } else if (!emailRegExp.test(values.email)) {
-    errors.email = "@를 포함하여 작성해주세요.";
+    errors.email = "😓 @를 포함하여 작성해주세요.";
   } else {
     errors.email = "";
   }
@@ -17,7 +17,7 @@ export const validate = (values) => {
   if (!values.password) {
     errors.password = "비밀번호를 입력해주세요.";
   } else if (!passwordRegExp.test(values.password)) {
-    errors.password = "비밀번호는 8자 이상 입력해주세요.";
+    errors.password = "😓 비밀번호는 8자 이상 입력해주세요.";
   } else {
     errors.password = "";
   }

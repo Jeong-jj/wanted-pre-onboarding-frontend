@@ -1,5 +1,6 @@
 import React from "react";
 import { LoginForm } from "../../components/Login/LoginForm";
+import { LinkContainer } from "../../components/common/LinkContainer/LinkContainer";
 
 import * as S from "./styles";
 
@@ -8,6 +9,7 @@ export const LoginPage = () => {
     <S.PageContainer>
       <S.PageTitle>로그인 정보를 입력해주세요!🙇‍♀️</S.PageTitle>
       <LoginForm />
+      <LinkContainer />
     </S.PageContainer>
   );
 };
