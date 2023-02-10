@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import * as S from "./styles";
 
 export const Input = ({
   join,
@@ -11,32 +11,15 @@ export const Input = ({
   errors,
 }) => {
   return (
-    <InputWrap>
-      <InputBox
+    <S.InputWrap>
+      <S.InputBox
         type={type || "text"}
         name={name}
         value={value.name}
         onChange={onChange}
         placeholder={placeholder}
       />
-      {join && errors[name] && <ErrorText>{errors[name]}</ErrorText>}
-    </InputWrap>
+      {join && errors[name] && <S.ErrorText>{errors[name]}</S.ErrorText>}
+    </S.InputWrap>
   );
 };
-
-const InputWrap = styled.div`
-  & + & {
-    margin-top: 12px;
-  }
-`;
-
-const InputBox = styled.input`
-  width: 280px;
-  padding: 8px 10px;
-`;
-
-const ErrorText = styled.p`
-  padding: 6px 0 0 5px;
-  font-size: 13px;
-  color: #006eff;
-`;

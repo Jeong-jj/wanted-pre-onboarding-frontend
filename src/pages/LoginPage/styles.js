@@ -15,11 +15,3 @@ export const PageTitle = styled.h1`
   font-size: 22px;
   font-weight: bold;
 `;
-
-export const LinkWrap = styled.div`
-  margin-top: 15px;
-  font-size: 13px;
-  a {
-    text-decoration: underline;
-  }
-`;

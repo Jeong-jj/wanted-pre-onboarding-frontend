@@ -13,6 +13,10 @@ const GlobalStyles = createGlobalStyle`
   a:active {
     text-decoration: none;
   }
+  button {
+    border: none;
+    background-color: transparent;
+  }
 
   /* project global setting */
   html, body, #root {
