@@ -17,8 +17,6 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 
   &.disable {
-    margin-top: 20px;
-
     border: 1px solid #a0a0a0;
 
     color: #898989;
