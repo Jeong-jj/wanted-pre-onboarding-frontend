@@ -7,6 +7,11 @@ export const PageContainer = styled.div`
   align-items: center;
 
   height: 100%;
+
+  p {
+    margin-top: 15px;
+    font-size: 13px;
+  }
 `;
 
 export const PageTitle = styled.h1`

@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import { JoinPage } from "./pages/JoinPage/JoinPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { MainPage } from "./pages/MainPage/MainPage";
@@ -8,9 +9,11 @@ function App() {
     <>
       <GlobalStyles />
       <div className="container">
-        <MainPage />
-        {/* <JoinPage /> */}
-        {/* <LoginPage /> */}
+        <Routes>
+          <Route index element={<MainPage />} />
+          <Route path="signup" element={<JoinPage />} />
+          <Route path="signin" element={<LoginPage />} />
+        </Routes>
       </div>
     </>
   );
