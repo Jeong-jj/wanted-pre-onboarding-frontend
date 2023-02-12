@@ -22,13 +22,13 @@ export const JoinForm = () => {
     }
   }, [errors, setIsChecked]);
 
-  const submit = (e) => {
+  const handleJoin = (e) => {
     e.preventDefault();
     join(values);
   };
 
   return (
-    <S.FormWrap onSubmit={submit}>
+    <S.FormWrap onSubmit={handleJoin}>
       <Input
         data-testid="email-input"
         name="email"
