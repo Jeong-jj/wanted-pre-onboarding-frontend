@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginForm } from "../../components/Login/LoginForm";
+import { LoginForm } from "../../components/LoginForm/LoginForm";
 import { LinkContainer } from "../../components/common/LinkContainer/LinkContainer";
 
 import * as S from "./styles";

@@ -4,6 +4,8 @@ import { useForm } from "../../hooks/useForm";
 import { Input } from "../common/Input/Input";
 import { validate } from "../../utils/validate";
 
+import { join } from "../../api";
+
 import * as S from "./styles";
 
 export const JoinForm = () => {
@@ -20,8 +22,13 @@ export const JoinForm = () => {
     }
   }, [errors, setIsChecked]);
 
+  const handleJoin = (e) => {
+    e.preventDefault();
+    join(values);
+  };
+
   return (
-    <S.FormWrap>
+    <S.FormWrap onSubmit={handleJoin}>
       <Input
         data-testid="email-input"
         name="email"

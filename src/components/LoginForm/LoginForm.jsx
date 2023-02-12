@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { login } from "../../api";
 
 import { useForm } from "../../hooks/useForm";
 import { Input } from "../common/Input/Input";
@@ -17,8 +18,13 @@ export const LoginForm = () => {
     }
   }, [values, setIsChecked]);
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+    login(values);
+  };
+
   return (
-    <S.FormWrap>
+    <S.FormWrap onSubmit={handleLogin}>
       <Input
         data-testid="email-input"
         name="email"
