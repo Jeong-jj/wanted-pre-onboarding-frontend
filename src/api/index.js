@@ -11,12 +11,13 @@ export const join = (req) => {
   instance
     .post(EP.JOIN, req)
     .then((res) => {
-      console.log(res);
-      return res.data;
+      alert("회원가입에 성공하였습니다!🎉");
+      console.log("result", res.status);
+      window.location.href = "/signin";
     })
     .catch((error) => {
-      console.log(error);
-      return error.response.message;
+      alert(error.response.data.message);
+      console.log(error.message);
     });
 };
 

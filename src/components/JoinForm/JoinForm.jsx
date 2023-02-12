@@ -7,13 +7,11 @@ import { validate } from "../../utils/validate";
 import { join } from "../../api";
 
 import * as S from "./styles";
-import { useNavigate } from "react-router-dom";
 
 export const JoinForm = () => {
   const { values, handleChange } = useForm(initailValues);
   const [isChecked, setIsChecked] = useState(false);
 
-  const navigate = useNavigate();
   const errors = validate(values);
 
   useEffect(() => {
@@ -27,7 +25,6 @@ export const JoinForm = () => {
   const submit = (e) => {
     e.preventDefault();
     join(values);
-    navigate("/signin");
   };
 
   return (
