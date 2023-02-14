@@ -2,21 +2,22 @@ import React, { useEffect, useState } from "react";
 import { login } from "../../api";
 
 import { useForm } from "../../hooks/useForm";
-import { Input } from "../common/Input/Input";
 
+import { Input } from "../common/Input/Input";
+import { SubmitButton } from "components/common/SubmitButton/SubmitButton";
 import * as S from "./styles";
 
 export const LoginForm = () => {
   const { values, handleChange } = useForm(initailValues);
-  const [isChecked, setIsChecked] = useState(false);
+  const [isFilled, setIsFilled] = useState(false);
 
   useEffect(() => {
     if (values.email && values.password) {
-      setIsChecked(true);
+      setIsFilled(true);
     } else {
-      setIsChecked(false);
+      setIsFilled(false);
     }
-  }, [values, setIsChecked]);
+  }, [values, setIsFilled]);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -41,14 +42,9 @@ export const LoginForm = () => {
         onChange={handleChange}
       />
 
-      <S.SubmitButton
-        data-testid="signin-button"
-        type="submit"
-        disabled={!isChecked}
-        className={`${isChecked ? "" : "disable"}`}
-      >
+      <SubmitButton data-testid="signin-button" isEnabled={isFilled}>
         로그인 하기
-      </S.SubmitButton>
+      </SubmitButton>
     </S.FormWrap>
   );
 };

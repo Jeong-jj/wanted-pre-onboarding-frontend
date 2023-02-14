@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
   button {
     border: none;
     background-color: transparent;
+    cursor:pointer;
   }
 
   /* project global setting */
