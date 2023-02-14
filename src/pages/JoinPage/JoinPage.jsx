@@ -1,6 +1,6 @@
 import React from "react";
-import { JoinForm } from "../../components/JoinForm/JoinForm";
-import { LinkContainer } from "../../components/common/LinkContainer/LinkContainer";
+import { JoinForm } from "components/JoinForm/JoinForm";
+import { LinkContainer } from "components/common/LinkContainer/LinkContainer";
 
 import * as S from "./styles";
 

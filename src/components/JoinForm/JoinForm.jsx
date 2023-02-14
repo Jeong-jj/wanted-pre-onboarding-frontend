@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import { useForm } from "../../hooks/useForm";
-import { Input } from "../common/Input/Input";
-import { validate } from "../../utils/validate";
+import { useForm } from "hooks/useForm";
+import { Input } from "components/common/Input/Input";
+import { validate } from "utils/validate";
 
-import { join } from "../../api";
+import { join } from "api";
 
 import * as S from "./styles";
 

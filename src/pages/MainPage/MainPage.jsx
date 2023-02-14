@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MainButtons } from "../../components/MainButtons/MainButtons";
+import { MainButtons } from "components/MainButtons/MainButtons";
 
 import * as S from "./styles";
 
