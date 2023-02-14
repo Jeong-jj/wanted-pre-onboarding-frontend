@@ -1,6 +1,7 @@
 const color = {
   main1: "#009dff",
   main2: "#35affc",
+  warning: "#ea3f3f",
 };
 
 const disable = {

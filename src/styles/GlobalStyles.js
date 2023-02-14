@@ -34,11 +34,13 @@ const GlobalStyles = createGlobalStyle`
     height: 85%;
     max-height: 1000px;
     width: 90%;
-    max-width: 1100px;
+    max-width: 800px;
 
     background-color: #fff;
     border: 2px solid #878787;
     border-radius: 15px;
+
+    overflow-y: auto;
   }
 `;
 
