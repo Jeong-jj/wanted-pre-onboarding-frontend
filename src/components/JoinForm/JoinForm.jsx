@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from "react";
 
-import { useForm } from "../../hooks/useForm";
-import { Input } from "../common/Input/Input";
-import { validate } from "../../utils/validate";
+import { useForm } from "hooks/useForm";
+import { validate } from "utils/validate";
 
-import { join } from "../../api";
+import { join } from "api";
 
+import { Input } from "components/common/Input/Input";
+import { SubmitButton } from "components/common/SubmitButton/SubmitButton";
 import * as S from "./styles";
 
 export const JoinForm = () => {
   const { values, handleChange } = useForm(initailValues);
-  const [isChecked, setIsChecked] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
 
   const errors = validate(values);
 
   useEffect(() => {
     if (!errors.email && !errors.password) {
-      setIsChecked(true);
+      setIsVerified(true);
     } else {
-      setIsChecked(false);
+      setIsVerified(false);
     }
-  }, [errors, setIsChecked]);
+  }, [errors, setIsVerified]);
 
   const handleJoin = (e) => {
     e.preventDefault();
@@ -49,14 +50,9 @@ export const JoinForm = () => {
         join
       />
 
-      <S.SubmitButton
-        data-testid="signup-button"
-        type="submit"
-        disabled={!isChecked}
-        className={`${isChecked ? "" : "disable"}`}
-      >
+      <SubmitButton data-testid="signup-button" isEnabled={isVerified}>
         가입하기
-      </S.SubmitButton>
+      </SubmitButton>
     </S.FormWrap>
   );
 };

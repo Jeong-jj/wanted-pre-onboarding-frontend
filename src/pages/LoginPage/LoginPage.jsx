@@ -1,6 +1,6 @@
 import React from "react";
-import { LoginForm } from "../../components/LoginForm/LoginForm";
-import { LinkContainer } from "../../components/common/LinkContainer/LinkContainer";
+import { LoginForm } from "components/LoginForm/LoginForm";
+import { LinkContainer } from "components/common/LinkContainer/LinkContainer";
 
 import * as S from "./styles";
 

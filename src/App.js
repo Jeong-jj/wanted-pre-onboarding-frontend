@@ -1,15 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./styles/GlobalStyles";
+import theme from "styles/Theme";
+
 import { JoinPage } from "./pages/JoinPage/JoinPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { MainPage } from "./pages/MainPage/MainPage";
 import { TodoPage } from "./pages/TodoPage/TodoPage";
 
-import GlobalStyles from "./styles/GlobalStyles";
-
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <div className="container">
         <Routes>
@@ -19,7 +21,7 @@ function App() {
           <Route path="todo" element={<TodoPage />} />
         </Routes>
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 

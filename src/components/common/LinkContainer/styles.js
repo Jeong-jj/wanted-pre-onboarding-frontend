@@ -13,7 +13,7 @@ export const LinkWrap = styled.div`
 `;
 
 export const ToHome = styled.div`
-  margin-top: 16px;
+  margin-top: 28px;
   font-size: 15px;
   font-weight: bold;
 `;
