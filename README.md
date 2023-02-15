@@ -34,6 +34,12 @@
 <br/>
 <br/>
 
+## 배포 페이지 바로가기
+
+[🏠배포 페이지](https://jeong-jj.github.io/wanted-pre-onboarding-frontend/) 바로가기
+
+<br/>
+
 ## 🚀 설치 방법
 
 파일 다운로드 혹은 fork 및 clone 후 다음 명령어 실행
