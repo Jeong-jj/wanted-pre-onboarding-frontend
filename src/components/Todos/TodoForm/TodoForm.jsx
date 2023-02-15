@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import { createTodo } from "api";
+
 import { SubmitButton } from "components/common/SubmitButton/SubmitButton";
 import * as S from "./styles";
 
@@ -19,8 +21,14 @@ export const TodoForm = () => {
     setValue(e.target.value);
   };
 
+  const submitTodo = (e) => {
+    // e.preventDefault();
+    createTodo({ todo: value });
+    setValue("");
+  };
+
   return (
-    <S.FormWrap>
+    <S.FormWrap onSubmit={submitTodo}>
       <S.Input
         data-testid="new-todo-input"
         value={value}

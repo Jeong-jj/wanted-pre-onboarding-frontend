@@ -1,15 +1,18 @@
 import axios from "axios";
-import { authToken } from "../utils/authtokken";
+import { authToken } from "../utils/authtoken";
+import { interceptors } from "./interceptor";
 import * as EP from "./endpoint";
 
 const BASE_URL = "https://pre-onboarding-selection-task.shop/";
 const HEADERS = { "Content-Type": "application/json" };
 
-const instance = axios.create({ baseURL: BASE_URL, headers: HEADERS });
+const api = axios.create({ baseURL: BASE_URL, headers: HEADERS });
+
+const apiWithToken = interceptors(api);
 
 // User
 export const join = (req) => {
-  instance
+  api
     .post(EP.JOIN, req)
     .then((res) => {
       console.log("result", res.status);
@@ -23,7 +26,7 @@ export const join = (req) => {
 };
 
 export const login = (req) => {
-  instance
+  api
     .post(EP.LOGIN, req)
     .then((res) => {
       console.log("result", res.status);
@@ -39,3 +42,25 @@ export const login = (req) => {
       }
     });
 };
+
+// Todos
+export const getTodos = async () => {
+  try {
+    const res = await apiWithToken.get(EP.GET_TODO);
+    return res;
+  } catch (error) {
+    console.error(error);
+  }
+};
+export const createTodo = (req) => {
+  apiWithToken
+    .post(EP.ADD_TODO, req)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+export const updateTodo = () => {};
+export const deleteTodo = () => {};
