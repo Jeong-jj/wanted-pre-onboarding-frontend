@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { getTodos } from "api";
 
-import { EditDeleteButtons } from "../EditDeleteButtons/EditDeleteButtons";
 import * as S from "./styles";
+import { TodoContent } from "../TodoContent/TodoContent";
 
 export const TodoList = () => {
   const [todos, setTodo] = useState(null);
@@ -17,29 +17,14 @@ export const TodoList = () => {
 
   console.log("todos", todos);
 
-  const handleChecked = () => {};
-
   return (
     <S.ListContainer>
       {todos !== null && todos.length > 0 ? (
-        todos.map((data, index) => {
-          return (
-            <S.ListWrap key={index}>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={data.isCompleted}
-                  onChange={handleChecked}
-                />
-                <span>{data.todo}</span>
-              </label>
-
-              <EditDeleteButtons />
-            </S.ListWrap>
-          );
+        todos.map((data) => {
+          return <TodoContent data={data} />;
         })
       ) : (
-        <p>아직 계획된 일이 없네요!</p>
+        <p>아직 계획된 일이 없어요!</p>
       )}
     </S.ListContainer>
   );
