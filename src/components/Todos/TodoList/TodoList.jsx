@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import data from "data/data.json";
+import { getTodos } from "api";
 
-import { EditDeleteButtons } from "../EditDeleteButtons/EditDeleteButtons";
 import * as S from "./styles";
+import { TodoContent } from "../TodoContent/TodoContent";
 
 export const TodoList = () => {
-  const todos = data.todos;
+  const [todos, setTodo] = useState(null);
+
+  useEffect(() => {
+    const todoData = getTodos();
+    todoData.then((res) => {
+      setTodo(res.data);
+    });
+  }, []);
+
+  console.log("todos", todos);
 
   return (
     <S.ListContainer>
-      {todos.map((data) => {
-        return (
-          <S.ListWrap key={data.id}>
-            <label>
-              <input type="checkbox" checked={data.isCompleted} />
-              <span>{data.todo}</span>
-            </label>
-
-            <EditDeleteButtons />
-          </S.ListWrap>
-        );
-      })}
+      {todos !== null && todos.length > 0 ? (
+        todos.map((data) => {
+          return <TodoContent key={data.id} data={data} />;
+        })
+      ) : (
+        <p>아직 계획된 일이 없어요!</p>
+      )}
     </S.ListContainer>
   );
 };

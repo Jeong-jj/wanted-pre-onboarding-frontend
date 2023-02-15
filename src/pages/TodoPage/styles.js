@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,4 +21,11 @@ export const Todos = styled.div`
   flex-direction: column;
 
   width: 75%;
+`;
+
+export const LogoutButton = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
 `;
