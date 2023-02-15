@@ -21,7 +21,7 @@ export const TodoList = () => {
     <S.ListContainer>
       {todos !== null && todos.length > 0 ? (
         todos.map((data) => {
-          return <TodoContent data={data} />;
+          return <TodoContent key={data.id} data={data} />;
         })
       ) : (
         <p>아직 계획된 일이 없어요!</p>

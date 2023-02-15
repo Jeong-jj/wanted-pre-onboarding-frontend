@@ -1,23 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { updateTodo } from "api";
 
 import { EditDeleteButtons } from "../EditDeleteButtons/EditDeleteButtons";
 import * as S from "./styles";
 
 export const TodoContent = ({ data }) => {
-  const handleChecked = () => {};
+  const [isCompleted, setIsCompleted] = useState(data.isCompleted);
+
+  const handleChecked = () => {
+    const checkedValue = [
+      {
+        todo: data.todo,
+        isCompleted: !isCompleted,
+      },
+      data.id,
+    ];
+
+    updateTodo(checkedValue);
+    setIsCompleted((prev) => !prev);
+  };
 
   return (
-    <S.ListWrap key={data.id}>
+    <S.ListWrap>
       <label>
-        <input
-          type="checkbox"
-          checked={data.isCompleted}
-          onChange={handleChecked}
-        />
+        <input type="checkbox" checked={isCompleted} onChange={handleChecked} />
         <span>{data.todo}</span>
       </label>
 
-      <EditDeleteButtons />
+      <EditDeleteButtons todoId={data.id} />
     </S.ListWrap>
   );
 };

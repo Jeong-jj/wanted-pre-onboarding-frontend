@@ -62,5 +62,25 @@ export const createTodo = (req) => {
       console.log(error);
     });
 };
-export const updateTodo = () => {};
-export const deleteTodo = () => {};
+export const updateTodo = (req) => {
+  apiWithToken
+    .put(EP.UPDATE_TODO(req[1]), req[0])
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Error: 수정사항이 반영되지 않았습니다.");
+    });
+};
+export const deleteTodo = (todoId) => {
+  apiWithToken
+    .delete(EP.DELETE_TODO(todoId))
+    .then((res) => {
+      console.log(res);
+      window.location.href = "/todo";
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
