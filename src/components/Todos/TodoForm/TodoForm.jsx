@@ -23,7 +23,9 @@ export const TodoForm = () => {
 
   const submitTodo = (e) => {
     // e.preventDefault();
-    createTodo({ todo: value });
+    if (value) {
+      createTodo({ todo: value });
+    }
     setValue("");
   };
 
