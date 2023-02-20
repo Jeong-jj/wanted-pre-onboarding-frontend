@@ -15,7 +15,7 @@ function App() {
       <GlobalStyles />
       <div className="container">
         <Routes>
-          <Route index path="/" element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="signup" element={<JoinPage />} />
           <Route path="signin" element={<LoginPage />} />
           <Route path="todo" element={<TodoPage />} />

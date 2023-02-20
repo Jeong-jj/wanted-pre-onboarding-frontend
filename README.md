@@ -34,9 +34,9 @@
 <br/>
 <br/>
 
-## 배포 페이지 바로가기
+## 🏠 배포 페이지 바로가기
 
-[🏠배포 페이지](https://jeong-jj.github.io/wanted-pre-onboarding-frontend/) 바로가기
+- 배포 URL: https://jeong-jj.github.io/wanted-pre-onboarding-frontend/
 
 <br/>
 
@@ -123,8 +123,7 @@ npm start
 
 ## 😓 미구현 및 추가 수정할 부분
 
-1. Todo 목록의 내용 수정 api는 연결 예정입니다.
-2. 새로운 목록 추가 시에 가끔 먹통이 되는 문제가 발견되어 수정 예정입니다.
+- Todo 목록의 내용 수정 api는 연결 예정입니다.
 
 <br/>
 <br/>

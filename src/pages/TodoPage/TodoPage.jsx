@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FiLogOut } from "react-icons/fi";
 
 import { authToken } from "utils/authtoken";
 
 import { TodoForm } from "components/Todos/TodoForm/TodoForm";
 import { TodoList } from "components/Todos/TodoList/TodoList";
 
+import { FiLogOut } from "react-icons/fi";
 import * as S from "./styles";
 
 export const TodoPage = () => {

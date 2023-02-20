@@ -17,7 +17,6 @@ export const join = (req) => {
     .then((res) => {
       console.log("result", res.status);
       alert("회원가입에 성공하였습니다!🎉");
-      window.location.href = "/signin";
     })
     .catch((error) => {
       alert(error.response.data.message);
@@ -31,7 +30,7 @@ export const login = (req) => {
     .then((res) => {
       console.log("result", res.status);
       authToken.setToken(res.data.access_token);
-      window.location.href = "/todo";
+      window.location.reload();
     })
     .catch((error) => {
       console.log(error.message);
@@ -78,7 +77,7 @@ export const deleteTodo = (todoId) => {
     .delete(EP.DELETE_TODO(todoId))
     .then((res) => {
       console.log(res);
-      window.location.href = "/todo";
+      window.location.reload();
     })
     .catch((error) => {
       console.log(error);

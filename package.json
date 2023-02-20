@@ -1,8 +1,9 @@
 {
   "name": "pre-onboarding-internship",
   "version": "0.1.0",
-  "homepage": "http://Jeong-jj.github.io/wanted-pre-onboarding-frontend",
   "private": true,
+  "homepage": "http://Jeong-jj.github.io/wanted-pre-onboarding-frontend",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

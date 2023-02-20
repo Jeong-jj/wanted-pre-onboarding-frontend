@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { join } from "api";
 
 import { useForm } from "hooks/useForm";
 import { validate } from "utils/validate";
-
-import { join } from "api";
 
 import { Input } from "components/common/Input/Input";
 import { SubmitButton } from "components/common/SubmitButton/SubmitButton";
@@ -12,6 +13,8 @@ import * as S from "./styles";
 export const JoinForm = () => {
   const { values, handleChange } = useForm(initailValues);
   const [isVerified, setIsVerified] = useState(false);
+
+  const navigate = useNavigate();
 
   const errors = validate(values);
 
@@ -26,6 +29,7 @@ export const JoinForm = () => {
   const handleJoin = (e) => {
     e.preventDefault();
     join(values);
+    navigate("/signin");
   };
 
   return (
