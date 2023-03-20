@@ -1,6 +1,6 @@
 import React from "react";
 
-import { deleteTodo } from "api";
+import { deleteTodo } from "api/queries/todo";
 
 import { RiDeleteBinLine } from "react-icons/ri";
 import { VscEdit } from "react-icons/vsc";

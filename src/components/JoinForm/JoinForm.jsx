@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { join } from "api";
+import { join } from "api/queries/user";
 
 import { useForm } from "hooks/useForm";
 import { validate } from "utils/validate";

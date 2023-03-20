@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { completeTodo } from "api";
+import { completeTodo } from "api/queries/todo";
 
 import EditFrom from "components/EditForm/EditFrom";
 import { EditDeleteButtons } from "../EditDeleteButtons/EditDeleteButtons";

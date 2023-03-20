@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { updateTodo } from "api";
+import { updateTodo } from "api/queries/todo";
 
 import * as S from "./styles";
 
