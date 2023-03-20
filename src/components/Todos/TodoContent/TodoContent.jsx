@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { updateTodo } from "api";
+import { completeTodo } from "api";
 
 import EditFrom from "components/EditForm/EditFrom";
 import { EditDeleteButtons } from "../EditDeleteButtons/EditDeleteButtons";
@@ -20,7 +20,7 @@ export const TodoContent = ({ data }) => {
       data.id,
     ];
 
-    updateTodo(checkedValue);
+    completeTodo(checkedValue);
     setIsCompleted((prev) => !prev);
   };
 

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { getTodos } from "api";
 
-import * as S from "./styles";
 import { TodoContent } from "../TodoContent/TodoContent";
+
+import * as S from "./styles";
 
 export const TodoList = () => {
   const [todos, setTodo] = useState(null);
@@ -14,8 +15,6 @@ export const TodoList = () => {
       setTodo(res.data);
     });
   }, []);
-
-  console.log("todos", todos);
 
   return (
     <S.ListContainer>
