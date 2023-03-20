@@ -55,7 +55,7 @@ npm start
 
 ### 메인 페이지 `/`
 
-![main page](https://user-images.githubusercontent.com/96231175/219034186-7e80cbbb-d0ed-4b59-8274-03b5171140d3.jpg)
+![main page](https://user-images.githubusercontent.com/96231175/226337284-d93ee797-9d05-4d4a-ad25-044812399c2b.jpg)
 
 - 로그인 및 회원가입 버튼으로 해당 페이지 이동 가능
 - TodoApp의 깃허브와 요구사항 링크 연결
@@ -65,7 +65,7 @@ npm start
 
 ### 회원가입 페이지 `/signup`
 
-![join page](https://user-images.githubusercontent.com/96231175/219034189-58531e7a-77d8-4aa2-b23d-0293df355b5c.jpg)
+![join page](https://user-images.githubusercontent.com/96231175/226337304-43f4f0b6-cffa-4b0b-8396-47c5783d1c98.jpg)
 
 - 유효성 검사 불통과 시엔 버튼 비활성화(disabled)
   - 이메일 조건: `@` 포함
@@ -80,7 +80,7 @@ npm start
 
 ### 로그인 페이지 `/signin`
 
-![login page](https://user-images.githubusercontent.com/96231175/219034197-1bc21cec-87e1-42ca-8e88-3bc60274e7b9.jpg)
+![login page](https://user-images.githubusercontent.com/96231175/226337302-9ccf2521-90a9-49b2-a0ab-5582b194fe5f.jpg)
 
 - 로그인 실패 시 경고창 메세지 알림
   - ex) `해당 사용자가 존재하지 않습니다.` or `비밀번호를 다시 확인해주세요.`
@@ -104,7 +104,7 @@ npm start
 
 #### 1) 아직 작성된 내용이 없을 때
 
-![todo page1](https://user-images.githubusercontent.com/96231175/219034202-7c24ba52-82d6-470b-b805-8ee5af66343d.jpg)
+![todo page1](https://user-images.githubusercontent.com/96231175/226337298-97da8175-3c39-4df6-88f7-a3729a5889b1.jpg)
 
 - 받아온 데이터에 내용이 없을 시 알림 문구 띄워줌
 
@@ -112,18 +112,22 @@ npm start
 
 #### 2) 할 일이 작성되어 있을 때
 
-![todo page2](https://user-images.githubusercontent.com/96231175/219034167-5535dbcb-15fe-4be1-9b68-b6f2f143c58f.jpg)
+![todo page2](https://user-images.githubusercontent.com/96231175/226337294-11b7b1f4-a56f-404b-9558-c72e0f905e98.jpg)
 
 - 데이터가 있을 시 TodoList 작성
 - 체크박스 클릭을 통해 체크 사항 수정 가능
 - 삭제 버튼(휴지통)으로 해당 목록 삭제 가능
 
 <br/>
-<br/>
 
-## 😓 미구현 및 추가 수정할 부분
+#### 3) 할 일 목록 수정하기
 
-- Todo 목록의 내용 수정 api는 연결 예정입니다.
+![todo editing](https://user-images.githubusercontent.com/96231175/226337321-4b2fac23-e109-4c0a-9767-da6995aaec32.jpg)
+
+- 수정 버튼 클릭시 editing 상태 돌입
+  - 기존 내용이 그대로 input안에 value값으로 들어오도록 함
+- 내용 수정 후 확인 클릭 시 수정 내용 반영 및 리렌더링
+- 취소 버튼 클릭시 기존 List 화면으로 돌아오도록 함
 
 <br/>
 <br/>
