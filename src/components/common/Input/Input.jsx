@@ -14,6 +14,7 @@ export const Input = ({
     <S.InputWrap>
       <S.InputBox
         type={type || "text"}
+        id={name}
         name={name}
         value={value.name}
         onChange={onChange}

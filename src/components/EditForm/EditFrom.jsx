@@ -17,7 +17,9 @@ const EditFrom = ({ data, setIsEditing }) => {
     setIsEditing((prev) => !prev);
   };
 
-  const editSubmit = () => {
+  const editSubmit = (e) => {
+    e.preventDefault();
+
     const editedValue = [
       {
         todo: editValue,
@@ -26,16 +28,23 @@ const EditFrom = ({ data, setIsEditing }) => {
       data.id,
     ];
 
-    updateTodo(editedValue);
-    setIsEditing((prev) => !prev);
+    if (editValue) {
+      updateTodo(editedValue);
+      setIsEditing((prev) => !prev);
+    } else {
+      alert("입력된 내용이 없습니다!");
+      document.getElementById("edit-input").focus();
+    }
   };
 
   return (
     <S.FormWrap onSubmit={editSubmit}>
       <S.EditInput
+        id="edit-input"
         placeholder="수정할 내용을 입력해주세요!"
         value={editValue}
         onChange={handleChange}
+        autoFocus={true}
       />
 
       <S.ButtonWrap>

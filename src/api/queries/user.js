@@ -28,8 +28,10 @@ export const login = (req) => {
       console.log(error.message);
       if (error.response.status === 404) {
         alert(error.response.data.message);
+        document.getElementById("email").focus();
       } else if (error.response.status === 401) {
         alert("비밀번호를 다시 확인해주세요.");
+        document.getElementById("password").focus();
       }
     });
 };
