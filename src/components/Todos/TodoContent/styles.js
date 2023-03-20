@@ -14,6 +14,7 @@ export const ListWrap = styled.li`
   label {
     display: flex;
     align-items: center;
+    width: 100%;
   }
 
   span {

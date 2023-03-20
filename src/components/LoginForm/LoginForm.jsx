@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { login } from "../../api";
+
+import { login } from "api/queries/user";
 
 import { useForm } from "../../hooks/useForm";
-
 import { Input } from "../common/Input/Input";
 import { SubmitButton } from "components/common/SubmitButton/SubmitButton";
+
 import * as S from "./styles";
 
 export const LoginForm = () => {
