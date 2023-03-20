@@ -1,7 +1,7 @@
 import { api } from "api";
-import * as EP from "../endpoint";
+import * as EP from "api/endpoint";
 
-import { authToken } from "../../utils/authtoken";
+import { authToken } from "utils/authtoken";
 
 export const join = (req) => {
   api

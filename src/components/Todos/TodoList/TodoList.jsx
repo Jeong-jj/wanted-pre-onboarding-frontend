@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { getTodos } from "api/queries/todo";
 
-import { TodoContent } from "../TodoContent/TodoContent";
+import { TodoContent } from "components/Todos/TodoContent/TodoContent";
 
 import * as S from "./styles";
 

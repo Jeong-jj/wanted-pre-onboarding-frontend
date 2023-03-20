@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { login } from "api/queries/user";
 
-import { useForm } from "../../hooks/useForm";
-import { Input } from "../common/Input/Input";
+import { useForm } from "hooks/useForm";
+import { Input } from "components/common/Input/Input";
 import { SubmitButton } from "components/common/SubmitButton/SubmitButton";
 
 import * as S from "./styles";

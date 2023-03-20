@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { completeTodo } from "api/queries/todo";
 
 import EditFrom from "components/EditForm/EditFrom";
-import { EditDeleteButtons } from "../EditDeleteButtons/EditDeleteButtons";
+import { EditDeleteButtons } from "components/Todos/EditDeleteButtons/EditDeleteButtons";
 
 import * as S from "./styles";
 

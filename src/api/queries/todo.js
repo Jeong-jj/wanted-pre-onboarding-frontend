@@ -1,5 +1,5 @@
 import { apiWithToken } from "api";
-import * as EP from "../endpoint";
+import * as EP from "api/endpoint";
 
 export const getTodos = async () => {
   try {

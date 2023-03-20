@@ -1,5 +1,5 @@
 import axios from "axios";
-import { interceptors } from "./interceptor";
+import { interceptors } from "api/interceptor";
 
 const BASE_URL = "https://pre-onboarding-selection-task.shop/";
 const HEADERS = { "Content-Type": "application/json" };
