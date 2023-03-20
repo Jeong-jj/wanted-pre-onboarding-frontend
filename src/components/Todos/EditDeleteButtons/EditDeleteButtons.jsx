@@ -7,15 +7,24 @@ import { VscEdit } from "react-icons/vsc";
 
 import * as S from "./styles";
 
-export const EditDeleteButtons = ({ todoId }) => {
+export const EditDeleteButtons = ({ todoId, setIsEditing }) => {
   const deleteThis = (e) => {
     e.preventDefault();
     deleteTodo(todoId);
   };
 
+  const editThis = (e) => {
+    e.preventDefault();
+    setIsEditing((prev) => !prev);
+  };
+
   return (
     <S.ButtonContainer>
-      <S.EditButton type="button" data-testid="modify-button">
+      <S.EditButton
+        type="button"
+        data-testid="modify-button"
+        onClick={editThis}
+      >
         <VscEdit size={16} />
       </S.EditButton>
       <S.DeleteButton

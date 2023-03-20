@@ -2,10 +2,13 @@ import React, { useState } from "react";
 
 import { updateTodo } from "api";
 
+import EditFrom from "components/EditForm/EditFrom";
 import { EditDeleteButtons } from "../EditDeleteButtons/EditDeleteButtons";
+
 import * as S from "./styles";
 
 export const TodoContent = ({ data }) => {
+  const [isEditing, setIsEditing] = useState(false);
   const [isCompleted, setIsCompleted] = useState(data.isCompleted);
 
   const handleChecked = () => {
@@ -25,10 +28,17 @@ export const TodoContent = ({ data }) => {
     <S.ListWrap>
       <label>
         <input type="checkbox" checked={isCompleted} onChange={handleChecked} />
-        <span>{data.todo}</span>
+
+        {!isEditing ? (
+          <span>{data.todo}</span>
+        ) : (
+          <EditFrom data={data} setIsEditing={setIsEditing} />
+        )}
       </label>
 
-      <EditDeleteButtons todoId={data.id} />
+      {!isEditing && (
+        <EditDeleteButtons todoId={data.id} setIsEditing={setIsEditing} />
+      )}
     </S.ListWrap>
   );
 };
