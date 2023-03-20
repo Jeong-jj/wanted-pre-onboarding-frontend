@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { updateTodo } from "api";
+
 import * as S from "./styles";
 
 const EditFrom = ({ data, setIsEditing }) => {
@@ -15,8 +17,21 @@ const EditFrom = ({ data, setIsEditing }) => {
     setIsEditing((prev) => !prev);
   };
 
+  const editSubmit = () => {
+    const editedValue = [
+      {
+        todo: editValue,
+        isCompleted: data.isCompleted,
+      },
+      data.id,
+    ];
+
+    updateTodo(editedValue);
+    setIsEditing((prev) => !prev);
+  };
+
   return (
-    <S.FormWrap>
+    <S.FormWrap onSubmit={editSubmit}>
       <S.EditInput
         placeholder="수정할 내용을 입력해주세요!"
         value={editValue}
@@ -24,7 +39,9 @@ const EditFrom = ({ data, setIsEditing }) => {
       />
 
       <S.ButtonWrap>
-        <S.SubmitButton type="submit">OK</S.SubmitButton>
+        <S.SubmitButton type="submit" onClick={editSubmit}>
+          OK
+        </S.SubmitButton>
         <S.EditButton type="button" onClick={cancelEdit}>
           X
         </S.EditButton>

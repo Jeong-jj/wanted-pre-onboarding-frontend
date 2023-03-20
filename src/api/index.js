@@ -66,6 +66,7 @@ export const updateTodo = (req) => {
     .put(EP.UPDATE_TODO(req[1]), req[0])
     .then((res) => {
       console.log(res);
+      window.location.reload();
     })
     .catch((error) => {
       console.log(error);
@@ -78,6 +79,7 @@ export const deleteTodo = (todoId) => {
     .then((res) => {
       console.log(res);
       window.location.reload();
+      alert("목록이 삭제되었습니다.");
     })
     .catch((error) => {
       console.log(error);
